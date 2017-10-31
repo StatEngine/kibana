@@ -28,6 +28,14 @@ If you want to use a Kibana release in production, give it a test run, or just p
 - We also offer a hosted version of Kibana on our
 [Cloud Service](https://www.elastic.co/cloud/as-a-service).
 
+### Dockerfile
+
+#### Building
+`docker build -t kibana .`
+
+#### Running
+`docker run -it -p 5601:5601 kibana`
+
 ### Building and Running Kibana, and/or Contributing Code
 
 You may want to build Kibana locally to contribute some code, test out the latest features, or try

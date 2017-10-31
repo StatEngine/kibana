@@ -1,0 +1,7 @@
+.node_binaries
+build
+data
+node_modules
+optimize
+plugins
+target

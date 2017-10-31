@@ -1,5 +1,8 @@
 FROM node:6
 
+# Overrride this for produciton
+ENV ELASTICSEARCH_URL=http://docker.for.mac.localhost:9200
+
 # Make src directory
 RUN mkdir -p /usr/src/kibana
 WORKDIR /usr/src/kibana
@@ -23,6 +26,6 @@ COPY . /usr/src/kibana
 RUN npm run build -- --skip-os-packages --skip-archives
 
 # Run
-CMD [ "/usr/src/kibana/build/kibana-5.5.3-SNAPSHOT-linux-x86_64/bin/kibana" ]
+CMD /usr/src/kibana/build/kibana-5.5.3-SNAPSHOT-linux-x86_64/bin/kibana -e ${ELASTICSEARCH_URL} --server.host="0.0.0.0"
 
 EXPOSE 5601

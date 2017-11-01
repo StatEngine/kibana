@@ -1,6 +1,6 @@
 FROM node:6
 
-# Overrride this for produciton
+ENV THEME=statengine
 ENV ELASTICSEARCH_URL=http://docker.for.mac.localhost:9200
 
 # Make src directory
@@ -25,7 +25,10 @@ COPY . /usr/src/kibana
 # Build
 RUN npm run build -- --skip-os-packages --skip-archives
 
+# Setup Run script
+RUN chmod +x /usr/src/kibana/docker-run.sh
+
 # Run
-CMD /usr/src/kibana/build/kibana-5.5.3-SNAPSHOT-linux-x86_64/bin/kibana -e ${ELASTICSEARCH_URL} --server.host="0.0.0.0"
+CMD /usr/src/kibana/docker-run.sh
 
 EXPOSE 5601

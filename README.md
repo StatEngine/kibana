@@ -28,14 +28,6 @@ If you want to use a Kibana release in production, give it a test run, or just p
 - We also offer a hosted version of Kibana on our
 [Cloud Service](https://www.elastic.co/cloud/as-a-service).
 
-### Dockerfile
-
-#### Building
-`docker build -t kibana .`
-
-#### Running
-`docker run -it -p 5601:5601 kibana`
-
 ### Building and Running Kibana, and/or Contributing Code
 
 You may want to build Kibana locally to contribute some code, test out the latest features, or try
@@ -100,3 +92,18 @@ Adding additional themes is as simple as creating a new folder under `/src/ui/th
 
 - theme.css
 - text-overrides.js
+
+## Dockerfile
+
+### Building
+`docker build -t kibana .`
+
+### Running
+#### Environment Variables
+`ELASTICSEARCH_URL`: url of elastic search instance  
+`THEME`: *statengine* (default) or *nfors*
+
+#### Example:
+```bash
+docker run -it -p 5601:5601 -e ELASTICSEARCH_URL=http://docker.for.mac.localhost:9200 -e THEME=nfors kibana
+```

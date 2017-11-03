@@ -1,7 +1,7 @@
 FROM node:6
 
 ENV THEME=statengine
-ENV ELASTICSEARCH_URL=http://docker.for.mac.localhost:9200
+ENV ELASTICSEARCH_URI=http://docker.for.mac.localhost:9200
 
 # Make src directory
 RUN mkdir -p /usr/src/kibana

@@ -1,7 +1,12 @@
 FROM node:6
 
+ARG READ_ONLY_REST_PLUGIN=readonlyrest_kbn_enterprise-1.16.12_es5.5.3.zip
+ENV READ_ONLY_REST_PLUGIN=${READ_ONLY_REST_PLUGIN}
+
 ENV THEME=statengine
 ENV ELASTICSEARCH_URI=http://docker.for.mac.localhost:9200
+ENV KIBANA_ELASTICSEARCH_USERNAME=kibana
+ENV KIBANA_ELASTICSEARCH_PASSWORD=kibana
 
 # Make src directory
 RUN mkdir -p /usr/src/kibana
@@ -27,6 +32,9 @@ RUN npm run build -- --skip-os-packages --skip-archives
 
 # Setup Run script
 RUN chmod +x /usr/src/kibana/docker-run.sh
+
+# Install Read Only Rest Plugin
+RUN /usr/src/kibana/build/kibana-5.5.3-SNAPSHOT-linux-x86_64/bin/kibana-plugin install file:///usr/src/kibana/$READ_ONLY_REST_PLUGIN
 
 # Run
 CMD /usr/src/kibana/docker-run.sh

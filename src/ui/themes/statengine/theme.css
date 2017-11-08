@@ -116,10 +116,6 @@
   background: linear-gradient(180deg, #155482, #113862);
 }
 
-#ror_logout {
-  background: none !important;
-}
-
 .global-nav.is-global-nav-open .logo-small.kibana ,
 .global-nav.is-global-nav-open .logo.kibana  {
   background-color: #022745;
@@ -263,4 +259,10 @@ button.login:focus,
   position: fixed;
   top: 0;
   left: 0;
+}
+
+/* Hide the logout button for now, since it doesnt work in current version */
+#ror_logout {
+  background: none !important;
+  visibility: hidden !important;
 }

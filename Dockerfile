@@ -37,7 +37,7 @@ RUN npm run build -- --skip-os-packages --skip-archives
 RUN chmod +x /usr/src/kibana/docker-run.sh
 
 # Install Read Only Rest Plugin
-RUN /usr/src/kibana/build/kibana-5.5.3-SNAPSHOT-linux-x86_64/bin/kibana-plugin install file:///usr/src/kibana/$READ_ONLY_REST_PLUGIN
+RUN /usr/src/kibana/build/kibana-5.5.2-SNAPSHOT-linux-x86_64/bin/kibana-plugin install file:///usr/src/kibana/$READ_ONLY_REST_PLUGIN
 
 # Run
 CMD /usr/src/kibana/docker-run.sh

@@ -116,6 +116,10 @@
   background: linear-gradient(180deg, #155482, #113862);
 }
 
+#ror_logout {
+  background: none !important;
+}
+
 .global-nav.is-global-nav-open .logo-small.kibana ,
 .global-nav.is-global-nav-open .logo.kibana  {
   background-color: #022745;

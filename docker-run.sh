@@ -13,4 +13,4 @@ ln -s /usr/src/kibana/build/$KIBANA_VERSION-linux-x86_64/src/ui/themes/$THEME/ /
   --elasticsearch.password=$KIBANA_PASSWORD \
   --elasticsearch.requestHeadersWhitelist=authorization,X-Forwarded-User,x-statengine-department \
   --readonlyrest_kbn.proxy_auth_passthrough=true \
-  --readonlyrest_kbn.proxy_auth_passthrough=$ROR_CUSTOM_LOGOUT_LINK
+  --readonlyrest_kbn.custom_logout_link=$ROR_CUSTOM_LOGOUT_LINK

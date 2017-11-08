@@ -1,7 +1,10 @@
 FROM node:6
 
-ARG READ_ONLY_REST_PLUGIN=readonlyrest_kbn_enterprise-1.16.12_es5.5.2_pe_patch.zip
-ENV READ_ONLY_REST_PLUGIN=${READ_ONLY_REST_PLUGIN}
+ARG KIBANA_VERSION=kibana-5.5.2-SNAPSHOT
+ENV KIBANA_VERSION=${KIBANA_VERSION}
+
+ARG ROR_VERSION=readonlyrest_kbn_enterprise-1.16.13_es5.5.2.zip
+ENV ROR_VERSION=${ROR_VERSION}
 
 ENV THEME=statengine
 ENV SERVER_HOST=0.0.0.0
@@ -37,7 +40,7 @@ RUN npm run build -- --skip-os-packages --skip-archives
 RUN chmod +x /usr/src/kibana/docker-run.sh
 
 # Install Read Only Rest Plugin
-RUN /usr/src/kibana/build/kibana-5.5.2-SNAPSHOT-linux-x86_64/bin/kibana-plugin install file:///usr/src/kibana/$READ_ONLY_REST_PLUGIN
+RUN /usr/src/kibana/build/$KIBANA_VESION-linux-x86_64/bin/kibana-plugin install file:///usr/src/kibana/$ROR_VERSION
 
 # Run
 CMD /usr/src/kibana/docker-run.sh

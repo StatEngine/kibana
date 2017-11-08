@@ -298,3 +298,9 @@ button.login:focus,
   top: 0;
   left: 0;
 }
+
+/* Hide the logout button for now, since it doesnt work in current version */
+#ror_logout {
+  background: none !important;
+  visibility: hidden !important;
+}

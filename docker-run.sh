@@ -9,7 +9,8 @@ ln -s /usr/src/kibana/build/kibana-5.5.3-SNAPSHOT-linux-x86_64/src/ui/themes/$TH
   -e $ELASTICSEARCH_URI \
   --server.host=$SERVER_HOST \
   --server.basePath=$SERVER_BASEPATH \
-  --elasticsearch.username=$KIBANA_ELASTICSEARCH_USERNAME \
-  --elasticsearch.password=$KIBANA_ELASTICSEARCH_PASSWORD \
-  --elasticsearch.requestHeadersWhitelist=authorization,X-Forwarded-User \
-  --readonlyrest_kbn.proxy_auth_passthrough=true
+  --elasticsearch.username=$KIBANA_USERNAME \
+  --elasticsearch.password=$KIBANA_PASSWORD \
+  --elasticsearch.requestHeadersWhitelist=authorization,X-Forwarded-User,x-statengine-department \
+  --readonlyrest_kbn.proxy_auth_passthrough=true \
+  --readonlyrest_kbn.proxy_auth_passthrough=$ROR_CUSTOM_LOGOUT_LINK

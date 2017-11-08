@@ -1,15 +1,15 @@
 FROM node:6
 
-ARG READ_ONLY_REST_PLUGIN=readonlyrest_kbn_enterprise-1.16.12_es5.5.3.zip
+ARG READ_ONLY_REST_PLUGIN=readonlyrest_kbn_enterprise-1.16.12_es5.5.2_pe_patch.zip
 ENV READ_ONLY_REST_PLUGIN=${READ_ONLY_REST_PLUGIN}
 
 ENV THEME=statengine
-
 ENV SERVER_HOST=0.0.0.0
 ENV SERVER_BASEPATH=/_plugin/kibana
 ENV ELASTICSEARCH_URI=http://docker.for.mac.localhost:9200
-ENV KIBANA_ELASTICSEARCH_USERNAME=kibana
-ENV KIBANA_ELASTICSEARCH_PASSWORD=kibana
+ENV KIBANA_USERNAME=kibana
+ENV KIBANA_PASSWORD=kibana
+ENV ROR_CUSTOM_LOGOUT_LINK=https://statengine.io
 
 # Make src directory
 RUN mkdir -p /usr/src/kibana

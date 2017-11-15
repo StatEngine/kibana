@@ -107,3 +107,4 @@ readonlyrest_kbn.proxy_auth_passthrough: true
 
 # Map Options
 tilemap.options.maxZoom: 22
+tilemap.url: http://a.tile.openstreetmap.org/{z}/{x}/{y}.png

@@ -11,6 +11,6 @@ ln -s /usr/src/kibana/build/$KIBANA_VERSION-linux-x86_64/src/ui/themes/$THEME/ /
   --server.basePath=$SERVER_BASEPATH \
   --elasticsearch.username=$KIBANA_USERNAME \
   --elasticsearch.password=$KIBANA_PASSWORD \
-  --elasticsearch.requestHeadersWhitelist=authorization,X-Forwarded-User,x-statengine-department \
+  --elasticsearch.requestHeadersWhitelist=authorization,X-Forwarded-User,x-se-fire-department-incident,x-se-fire-department-avl \
   --readonlyrest_kbn.proxy_auth_passthrough=true \
   --readonlyrest_kbn.custom_logout_link=$ROR_CUSTOM_LOGOUT_LINK

@@ -13,45 +13,7 @@ block content
       font-size: initial;
     }
 
-    .kibanaLoader {
-      position: relative;
-      top: -5em;
-    }
-
-    .kibanaLoader__content{
-      width: 15em;
-      height: 15em;
-      border-radius: 50%;
-      background: #000000;
-      background: linear-gradient(to right, #009bc6 10%, rgba(0, 0, 0, 0.15) 42%);
-      position: relative;
-      animation: loader 1.4s infinite linear;
-      transform: translateZ(0);
-    }
-    .kibanaLoader__content:before {
-      width: 50%;
-      height: 50%;
-      background: linear-gradient(90deg, #009bc6 0%, #00f2ca 25%, #00f0cb 100%);
-      border-radius: 100% 0 0 0;
-      position: absolute;
-      top: 0;
-      left: 0;
-      content: '';
-    }
-    .kibanaLoader__content:after {
-      background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 30%, rgba(195,206,213,1) 100%);
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#c3ced5', GradientType=1 );
-      width: 92%;
-      height: 92%;
-      border-radius: 50%;
-      content: '';
-      margin: auto;
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-    }
+  
     @-webkit-keyframes loader {
       0% {
         -webkit-transform: rotate(0deg);

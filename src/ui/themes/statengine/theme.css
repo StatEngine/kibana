@@ -138,6 +138,11 @@
   background-color: #0091a9;
 }
 
+/* move collapse to bottom */
+.global-nav__links-section:nth-of-type(2) {
+  order: 2;
+}
+
 /* Top Loading Indicator Bar =======================================================*/
 .loadingIndicator__bar {
   background-color: #00f5c9;
@@ -263,4 +268,5 @@ button.login:focus,
 
 #ror_logout {
   background-color: #022745 !important;
+  margin-top: auto;
 }

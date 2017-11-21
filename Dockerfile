@@ -3,7 +3,7 @@ FROM node:6
 ARG KIBANA_VERSION=kibana-5.5.2-SNAPSHOT
 ENV KIBANA_VERSION=${KIBANA_VERSION}
 
-ARG ROR_VERSION=readonlyrest_kbn_enterprise-1.16.13_es5.5.2.zip
+ARG ROR_VERSION=readonlyrest_kbn_enterprise-1.16.14_es5.5.2.zip
 ENV ROR_VERSION=${ROR_VERSION}
 
 ENV THEME=statengine

@@ -10,8 +10,8 @@ ENV THEME=statengine
 ENV SERVER_HOST=0.0.0.0
 ENV SERVER_BASEPATH=/_plugin/kibana
 ENV ELASTICSEARCH_URI=http://docker.for.mac.localhost:9200
-ENV KIBANA_USERNAME=kibana
-ENV KIBANA_PASSWORD=kibana
+ENV ELASTICSEARCH_KIBANA_USER=kibana
+ENV ELASTICSEARCH_KIBANA_PASSWORD=kibana
 ENV ROR_CUSTOM_LOGOUT_LINK=https://statengine.io
 
 # Make src directory

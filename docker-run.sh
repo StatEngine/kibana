@@ -9,6 +9,6 @@ ln -s /usr/src/kibana/build/$KIBANA_VERSION-linux-x86_64/src/ui/themes/$THEME/ /
   -e $ELASTICSEARCH_URI \
   --server.host=$SERVER_HOST \
   --server.basePath=$SERVER_BASEPATH \
-  --elasticsearch.username=$KIBANA_USERNAME \
-  --elasticsearch.password=$KIBANA_PASSWORD \
+  --elasticsearch.username=$ELASTICSEARCH_KIBANA_USER \
+  --elasticsearch.password=$ELASTICSEARCH_KIBANA_PASSWORD \
   --readonlyrest_kbn.custom_logout_link=$ROR_CUSTOM_LOGOUT_LINK

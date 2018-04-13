@@ -103,7 +103,7 @@ elasticsearch.requestHeadersWhitelist: [ authorization, "X-Forwarded-User",  "x-
 # translations.
 #i18n.defaultLocale: "en"
 
-readonlyrest_kbn.proxy_auth_passthrough: true
+readonlyrest_kbn.jwt_query_param: "jwt"
 
 # Map Options
 tilemap.options.maxZoom: 22

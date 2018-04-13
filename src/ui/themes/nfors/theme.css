@@ -305,6 +305,6 @@ button.login:focus,
 }
 
 #ror_logout {
-  background-color: #2a2320 !important;
-  margin-top: auto;
+  background: none !important;
+  visibility: hidden !important;;
 }
